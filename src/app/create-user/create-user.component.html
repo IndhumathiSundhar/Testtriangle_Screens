@@ -1,0 +1,113 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <div id="login-box">
+    <div class="center">
+      <h1>Create User</h1>
+      <div class="form-group">
+        <input type="text" formControlName="username" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Username" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required" style="font-size: 10px;color: red;">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="email" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="E-mail" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+          <div *ngIf="f.email.errors.required" style="font-size: 10px;color: red;">Email is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="password" formControlName="password" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+          <div *ngIf="f.password.errors.required" style="font-size: 10px;color: red;">Password is required</div>
+          <div *ngIf="f.password.errors.minlength" style="font-size: 10px;color: red;">Password must be at least 6
+            characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="password" formControlName="password2" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.password2.errors }" placeholder="Confirm password" />
+        <div *ngIf="submitted && f.password2.errors" class="invalid-feedback">
+          <div *ngIf="f.password2.errors.required" style="font-size: 10px;color: red;">Password is required</div>
+          <div *ngIf="f.password.errors.minlength" style="font-size: 10px;color: red;">Password must be at least 6
+            characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="displayname" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.displayname.errors }" placeholder="Display Name" />
+        <div *ngIf="submitted && f.displayname.errors" class="invalid-feedback">
+          <div *ngIf="f.displayname.errors.required" style="font-size: 10px;color: red;">Displayname is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="firstName" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" placeholder="First Name" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+          <div *ngIf="f.firstName.errors.required" style="font-size: 10px;color: red;">Firstname is required</div>
+        </div>
+        <input type="text" class="form-control" formControlName="lastName"
+          [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" placeholder="Last Name" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+          <div *ngIf="f.lastName.errors.required" style="font-size: 10px;color: red;">Lastname is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="nick" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.nick.errors }" placeholder="Nick Name" />
+        <div *ngIf="submitted && f.nick.errors" class="invalid-feedback">
+          <div *ngIf="f.nick.errors.required" style="font-size: 10px;color: red;">Nickname is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="website" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.website.errors }" placeholder="Website" />
+        <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+          <div *ngIf="f.website.errors.required" style="font-size: 10px;color: red;">Website is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="bio" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.bio.errors }" placeholder="Bio" />
+        <div *ngIf="submitted && f.bio.errors" class="invalid-feedback">
+          <div *ngIf="f.bio.errors.required" style="font-size: 10px;color: red;">Bio is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="jabber" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.jabber.errors }" placeholder="Jabber" />
+        <div *ngIf="submitted && f.jabber.errors" class="invalid-feedback">
+          <div *ngIf="f.jabber.errors.required" style="font-size: 10px;color: red;">Jabber is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="aolim" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.aolim.errors }" placeholder="AOL IM" />
+        <div *ngIf="submitted && f.aolim.errors" class="invalid-feedback">
+          <div *ngIf="f.aolim.errors.required" style="font-size: 10px;color: red;">Aol Im is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="text" formControlName="yahooim" class="form-control"
+          [ngClass]="{ 'is-invalid': submitted && f.yahooim.errors }" placeholder="yahoo IM" />
+        <div *ngIf="submitted && f.yahooim.errors" class="invalid-feedback">
+          <div *ngIf="f.yahooim.errors.required" style="font-size: 10px;color: red;">Yahoo Im is required</div>
+        </div>
+      </div>
+
+      <input type="submit" name="signup_submit" value="CREATE AND ACCESS" />
+    </div>
+  </div>
+</form>

@@ -1,0 +1,92 @@
+<mat-grid-list cols="12" rows="10" style="padding: 6px;" rowHeight="60px">
+    <mat-grid-tile colspan="1" rowspan="1"> </mat-grid-tile>
+    <mat-grid-tile colspan="11" rowspan="1">
+
+        <mat-grid-list cols="24" [style.background]="'skyblue'" style="padding: 6px;" class="child-css"
+            rowHeight="50px">
+            <mat-grid-tile [style.display]="block" colspan="3" rowspan="1" style="font-size: 22px;">Contract Portal
+            </mat-grid-tile>
+            <mat-grid-tile colspan="17" rowspan="1" [style.background]="'gray'"
+                style="font-size: 48px; color: seashell;"> TEST TRIANGLE </mat-grid-tile>
+            <mat-grid-tile colspan="1" rowspan="1" style="font-size: 18px;"> Home </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="1" style="font-size: 18px;"> About </mat-grid-tile>
+            <mat-grid-tile colspan="2" rowspan="1">
+                <i class="material-icons" style="font-size: 48px;">
+                    account_box
+                </i>
+                <button mat-button [matMenuTriggerFor]="menu" style="font-size: 18px;">{{currentUser.username}}</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>User Prefernce</button>
+                    <button mat-menu-item>Account Setting</button>
+                    <button mat-menu-item (click)="logout()">Logout</button>
+                </mat-menu>
+
+
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+    </mat-grid-tile>
+
+    <!-- // Icons  -->
+    <mat-grid-tile colspan="1" rowspan="9"> </mat-grid-tile>
+    <div><i class="material-icons" style="font-size: 58px;">
+            reorder
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            account_balance
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            dashboard
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            find_in_page
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            group_work
+        </i></div>
+
+    <div><i class="material-icons" style="font-size: 58px;">
+            search
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            settings_applications
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            today
+        </i></div>
+    <div><i class="material-icons" style="font-size: 58px;">
+            view_module
+        </i></div>
+
+    <mat-grid-tile colspan="11" rowspan="9" [style.background]="'black'">
+
+
+        <mat-grid-list cols="12" rows="3" [style.background]="'skyblue'" class="child-css" rowHeight="33.5%">
+
+            <mat-grid-tile colspan="8" rowspan="1">
+                <mat-card class="customright"> </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card  class="custom"> </mat-card>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="8" rowspan="2">
+                <mat-card  class="customright"> </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card  class="custom">  </mat-card>
+            </mat-grid-tile>
+
+
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card  class="custom"> </mat-card>
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+    </mat-grid-tile>
+
+</mat-grid-list>
